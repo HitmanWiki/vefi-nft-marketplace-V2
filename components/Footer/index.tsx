@@ -1,105 +1,60 @@
 import Link from 'next/link';
-import { FaDiscord, FaYoutube } from 'react-icons/fa';
+import { FaDiscord, FaMedium, FaTelegram } from 'react-icons/fa';
+import { FiYoutube } from 'react-icons/fi';
 
-export default function index() {
+export default function Footer() {
   return (
-    <div className="w-full text-white py-4 md:py-8 lg:py-12" style={{ background: 'linear-gradient(0deg, #121212, #121212), #01003E' }}>
-      <div className="flex md:flex-row flex-col lg:flex-row justify-between lg:mx-12">
-        {/* Firs Section */}
-        <div className="px-8 md:px-8 ">
-          <span className="text-lg ">
-            Join our community <br /> of NFT enthusiast.
-          </span>
-
-          <div className="flex gap-4 text-[#5865F2] mb-4 items-center mt-6 cursor-pointer md:text-6xl text-4xl">
-            <Link href="/">
-              <span>
-                {' '}
-                <FaDiscord />{' '}
-              </span>
-            </Link>
-
-            {/* <Link href='/'>
-                   <h1 className='mr-12  hidden md:block'> Discord </h1>
-                 </Link> */}
-
-            <Link href="/">
-              <span>
-                {' '}
-                <FaYoutube />{' '}
-              </span>
-            </Link>
+    <div
+      className="w-full flex flex-col gap-3 items-center justify-center py-1"
+      style={{ background: 'linear-gradient(0deg, #121212, #121212), #01003E' }}
+    >
+      <div className="w-full flex flex-col lg:flex-row justify-start items-center lg:justify-evenly text-white py-4 px-12 gap-4">
+        <div className="flex flex-col justify-center items-center gap-6">
+          <span className="text-[#fff] font-monumentExtended text-[1em] font-[800]">Join our community of NFT enthusiasts.</span>
+          <div className="flex justify-center gap-2 items-center text-[21.5px] lg:text-[43px] text-[#5865f2]">
+            <a href="#">
+              <FaDiscord />
+            </a>
+            <a href="#">
+              <FaMedium />
+            </a>
+            <a href="#">
+              <FiYoutube />
+            </a>
+            <a href="#">
+              <FaTelegram />
+            </a>
           </div>
         </div>
-        {/* End of First Section */}
 
-        {/* Second Section */}
-        <div
-          className="
-              flex md:px-8 flex-row ml-8 lg:flex-row
-            "
-        >
-          <div className="md:mr-12">
-            <span className="mb-2 md:mb-6 text-lg">Marketplace</span>
-
-            <ul
-              className="
-                    text-sm pt-2 text-white text-opacity-70
-                  "
-            >
-              <li>
-                <Link href="/">Launchpad</Link>
-              </li>
-
-              <li>
-                <Link href="/">Knowledge base</Link>
-              </li>
-
-              <li>
-                <Link href="/">Staking</Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className=" mx-12">
-            <span className="mb-2 md:mb-6 text-lg">Links</span>
-
-            <ul
-              className="
-                    text-sm pt-2 text-white text-opacity-70
-                  "
-            >
-              <li>
-                <Link href="/">Become a partner</Link>
-              </li>
-
-              <li>
-                <Link href="/">Alt vef</Link>
-              </li>
-            </ul>
+        <div className="flex flex-col justify-center items-center gap-6">
+          <span className="text-[#fff] font-monumentExtended text-[1em] font-[800]">Marketplace.</span>
+          <div className="flex flex-col justify-center gap-2 items-center text-[0.8em] text-[#c6c6c6] font-[400] font-outfit">
+            <Link href="/launchpad">Launchpad</Link>
+            <Link href="/launchpad">Analytics</Link>
+            <Link href="/launchpad">Staking</Link>
           </div>
         </div>
-        {/* End of Second Section */}
-      </div>
 
-      {/* Last Section */}
-      <div
-        className="
-          border-t border-white border-opacity-25 mt-8
-        "
-      >
-        <p
-          className="
-                pt-8 flex items-center justify-center gap-2 
-                text-white text-opacity-70
-              "
-        >
-          <span className="font-bold"> VEFI NFT marketplace</span>
-          is an independent product of the
-          <span className="font-bold">VEFI ecosystem</span>
-        </p>
+        <div className="flex flex-col justify-center items-center gap-6">
+          <span className="text-[#fff] font-monumentExtended text-[1em] font-[800]">Links.</span>
+          <div className="flex flex-col justify-center gap-2 items-center text-[0.8em] text-[#c6c6c6] font-[400] font-outfit">
+            <a href="#">Become a partner</a>
+            <a href="#">Buy VEF</a>
+            <a href="#">Ecosystem</a>
+          </div>
+        </div>
       </div>
-      {/* End of Last Section */}
+      <div className="flex flex-col text-[#c6c6c6] text-[0.89em] lg:flex-row justify-center items-center gap-4 border-t border-[#fff] px-2 py-2 w-full">
+        <article className="text-center">
+          <span className="font-[800]">The Vefi NFT marketplace</span> <span className="font-[400]">is a product of the</span>{' '}
+          <span className="font-[800]">Vefi Ecosystem</span>
+        </article>
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-4 font-[600]">
+          <a href="#">Terms Of Service</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
     </div>
   );
 }

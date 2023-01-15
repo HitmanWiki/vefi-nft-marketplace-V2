@@ -6,12 +6,12 @@ import Footer from '../components/Footer';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
-      className={`flex justify-center  flex-col min-h-screen w-screen gap-4`}
+      className={`flex justify-start items-start min-h-screen flex-col w-screen gap-3`}
       style={{ background: 'linear-gradient(0deg, #020117, #020117), linear-gradient(0deg, #121212, #121212), #03015A' }}
     >
       <Header />
 
-      <div className="flex-1  max-w-full mt-[62.05px]">
+      <div className="flex-1 overflow-auto w-full">
         <Component {...pageProps} />
       </div>
 
