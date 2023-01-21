@@ -51,46 +51,25 @@ const mockData = [
     startDate: new Date(Date.now() + 60 * 60 * 24 * 1 * 1000),
     endDate: new Date(Date.now() + 60 * 60 * 24 * 14 * 1000),
     image: '/placeholders/images/goated.png'
-  },
-  {
-    collectionName: 'Family Guy',
-    artistName: 'Jenny Palace',
-    startDate: new Date(Date.now() + 60 * 60 * 24 * 5 * 1000),
-    endDate: new Date(Date.now() + 60 * 60 * 24 * 14 * 1000),
-    image: '/placeholders/images/family_guy.gif'
   }
 ];
 export default function Drops() {
   return (
-    <div className="flex flex-nowrap flex-row justify-start items-center w-full overflow-scroll py-2 md:my-auto my-2 gap-2">
+    <div className="carousel carousel-center gap-3 w-full overflow-auto">
       {_.map(mockData, (data, index) => (
-        <div key={index} className="w-[350.78px] px-[3px] py-[4px] h-full">
-          <div className="card card-bordered shadow-xl w-[inherit] bg-transparent overflow-auto h-full">
-            <figure className="w-[inherit] h-[200.56px]">
-              <img src={data.image} alt={data.collectionName} className="w-[inherit] h-[inherit] rounded-[10px]" />
+        <div key={index} className="px-1 py-1 carousel-item w-full lg:w-1/5">
+          <div className="card card-bordered shadow-xl bg-transparent w-full h-full">
+            <figure className="w-full h-[200px]">
+              <img src={data.image} alt={data.collectionName} className="w-full h-full" />
             </figure>
-            <div className="card-body w-full overflow-auto">
+            <div className="card-body w-full">
               <div className="flex justify-between items-center w-full">
-                <h2 className="card-title text-[#fff] font-monumentExtended">{data.collectionName}</h2>
-                <label
-                  className={`rounded-[5px] py-1 px-1 flex justify-center border-[1px] text-[12px] font-outfit ${
-                    data.startDate.getTime() < Date.now() && data.endDate.getTime() > Date.now()
-                      ? 'border-[#00ff47] text-[#00ff47]'
-                      : Date.now() < data.startDate.getTime()
-                      ? 'border-[#fff] text-[#fff]'
-                      : 'border-[red] text-[red]'
-                  }`}
-                >
-                  {data.startDate.getTime() < Date.now() && data.endDate.getTime() > Date.now() ? (
-                    'Live'
-                  ) : Date.now() < data.startDate.getTime() ? (
-                    <Moment duration={new Date(Date.now())} date={data.startDate} interval={1000} format="dd[days-]hh[hrs-]mm[mins]" />
-                  ) : (
-                    'Ended'
-                  )}
+                <span className="text-[#fff] font-[800] font-monumentExtended text-[0.8em]">{data.collectionName}</span>
+                <label className="rounded-[5px] py-1 px-1 flex justify-center border-[1px] text-[12px] font-outfit border-[#00ff47] text-[#00ff47]">
+                  Live
                 </label>
               </div>
-              <span className="text-[#e21950] font-[400] text-[16px] font-monumentExtended">{data.artistName}</span>
+              <span className="text-[#e21950] font-[400] text-[0.5em] font-monumentExtended">{data.artistName}</span>
             </div>
           </div>
         </div>
