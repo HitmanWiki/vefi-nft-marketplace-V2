@@ -55,9 +55,9 @@ const mockData = [
 ];
 export default function Drops() {
   return (
-    <div className="flex flex-col lg:flex-row justify-start md:justify-center items-center gap-2 w-full overflow-auto">
+    <div className="carousel carousel-center gap-3 w-full overflow-auto">
       {_.map(mockData, (data, index) => (
-        <div key={index} className="px-[3px] py-[4px] w-full lg:w-1/4">
+        <div key={index} className="px-1 py-1 carousel-item w-full lg:w-1/5">
           <div className="card card-bordered shadow-xl bg-transparent w-full h-full">
             <figure className="w-full h-[200px]">
               <img src={data.image} alt={data.collectionName} className="w-full h-full" />

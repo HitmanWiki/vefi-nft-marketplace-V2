@@ -53,9 +53,9 @@ const mockData: Array<{ name: string; blockchain: string; image: string }> = [
 
 export default function TrendingProjects() {
   return (
-    <div className="flex flex-col lg:flex-row flex-nowrap justify-start items-center w-full overflow-scroll py-2 px-3 gap-2">
+    <div className="carousel carousel-center gap-3 w-full overflow-auto">
       {_.map(mockData, (data, index) => (
-        <div key={index} className="px-[3px] py-[4px] w-full lg:w-1/4">
+        <div key={index} className="px-1 py-1 carousel-item w-full lg:w-1/5">
           <div className="card shadow-xl bg-transparent w-full h-full image-full hover:scale-105 transition-transform ease-in-out delay-150 font-monumentExtended cursor-pointer">
             <figure>
               <img src={data.image} alt={data.name} />

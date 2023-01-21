@@ -65,7 +65,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 px-5">
+    <div className="flex flex-col lg:flex-row justify-center items-center w-full gap-4 px-5">
       <div className="flex flex-col justify-center items-center md:items-start gap-2">
         <span className="text-[#fff] font-[800] text-[30px] md:text-[48px] font-monumentExtended text-center md:text-left">Buy &amp; Sell</span>
         {_.map(heroTexts, (txt, index) => (
@@ -93,9 +93,9 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <div className="flex flex-nowrap flex-row justify-start items-center w-full lg:w-1/2 overflow-scroll py-2 px-3 gap-2">
+      <div className="carousel carousel-center gap-3 w-full overflow-auto">
         {_.map(mockData, (data, index) => (
-          <div key={index} className="px-[3px] py-[4px] w-full lg:w-1/2">
+          <div key={index} className="px-2 py-2 carousel-item w-full lg:w-1/4">
             <div className="card card-bordered shadow-xl px-2 py-2 bg-white rounded-[26px] w-full h-full">
               <div className="flex justify-center items-center transition-opacity ease-in-out">
                 <div className="absolute py-2 top-3 left-2 w-full flex flex-col justify-start items-center gap-16 bg-transparent opacity-0 hover:opacity-100 h-[250px]">

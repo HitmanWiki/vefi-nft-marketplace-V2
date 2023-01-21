@@ -8,14 +8,14 @@
   },
   "32520": {
     "rpcUrl": "https://rpc.icecreamswap.com",
-    "name": "Bitgert Mainnet",
+    "name": "Bitgert",
     "logoURI": "/images/bitgert.webp",
     "symbol": "BRISE",
     "explorer": "https://brisescan.com"
   },
   "311": {
     "rpcUrl": "https://mainapi.omaxray.com",
-    "name": "Omax Chain Mainnet",
+    "name": "Omax Chain",
     "symbol": "OMAX",
     "logoURI": "/images/omax.webp",
     "explorer": "https://omaxray.com"
@@ -42,7 +42,7 @@
     "symbol": "WAN"
   },
   "66": {
-    "name": "OKX Chain Mainnet",
+    "name": "OKX Chain",
     "rpcUrl": "https://exchainrpc.okex.org",
     "explorer": "https://oklink.com/en/okc",
     "logoURI": "/images/okx.webp",
