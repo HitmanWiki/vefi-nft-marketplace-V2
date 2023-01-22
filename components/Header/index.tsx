@@ -12,13 +12,13 @@ export default function Header() {
         <Image className="rounded-[25px] cursor-pointer" width={95} height={95} src="/logo.svg" alt="logo" />
       </Link>
       <div className="flex justify-between items-center gap-4">
-        <button className="bg-[#ffe600] text-[#000] py-1 px-2 rounded-[10px] text-[7px] lg:text-[14px]">
+        <button className="bg-[#ffe600] text-[#000] py-1 px-2 rounded-[10px] text-[0.9em]">
           <span className="font-[700] font-outfit">Connect Wallet</span>
         </button>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="p-0">
-            <button className="border-[0.5px] border-[#fff] py-1 px-4 rounded-[11px] m-0">
-              <span className="text-[#fff] font-[700] text-[19px]">
+            <button className="border-[0.5px] border-[#fff] py-1 px-4 rounded-[11px] text-[0.9em]">
+              <span className="text-[#fff] font-[700]">
                 <FiMoreHorizontal />
               </span>
             </button>

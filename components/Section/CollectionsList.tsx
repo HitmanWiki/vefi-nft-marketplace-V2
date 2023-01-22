@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
 import { FiTwitter, FiGlobe } from 'react-icons/fi';
@@ -46,7 +47,11 @@ export default function CollectionsList() {
                     <div className="flex justify-start items-center gap-2 py-1 w-full">
                       <img src={item.image} alt={item.name} className="rounded-[3px] w-8 h-8" />
                       <div className="flex justify-start px-2">
-                        <span className="font-[600]">{item.name}</span>
+                        <Link href={`/collections/${item.blockchain}/${item.id}`}>
+                          <a>
+                            <span className="font-[600]">{item.name}</span>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

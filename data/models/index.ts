@@ -35,6 +35,7 @@ export type Collection = {
   banner: string;
   blockchain: string;
   createdOn: Date;
+  description: string;
   urls?: {
     twitter?: string;
     discord?: string;
