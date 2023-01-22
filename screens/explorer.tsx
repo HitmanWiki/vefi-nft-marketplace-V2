@@ -22,19 +22,21 @@ export const NFTs = () => {
     <>
       {hydrated && (
         <div className="flex flex-col justify-center items-center gap-3 w-full">
-          <div className="flex justify-center md:justify-start items-center w-full gap-5 px-1">
-            <button
-              onClick={() => setShowFilters((show) => !show)}
-              className="bg-[#7d7d7d]/30 text-white font-bold p-3 font-outfit flex items-center rounded-md backdrop-blur-[30.7px] justify-center gap-1"
-            >
-              <div className="hidden md:block">{!showFilters ? <FiChevronRight /> : <FiChevronLeft />}</div>
-              <div className="md:hidden">{!showFilters ? <FiChevronDown /> : <FiChevronUp />}</div>
-              <span>Filters</span>
-            </button>
-            <button className="bg-[#7d7d7d]/30 text-white font-bold p-3 flex items-center rounded-md backdrop-blur-[30.7px]">
-              <FiRefreshCw />
-            </button>
-            <div className="bg-[#7d7d7d]/30  flex-1 flex items-center rounded-[10px] mr-2 text-white backdrop-blur-[30.7px]">
+          <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center w-full gap-5 px-7 lg:px-4">
+            <div className="flex justify-center items-center lg:h-full gap-3 w-full lg:w-auto">
+              <button
+                onClick={() => setShowFilters((show) => !show)}
+                className="bg-[#7d7d7d]/30 text-white font-bold p-3 font-outfit flex items-center rounded-md backdrop-blur-[30.7px] justify-start gap-2 lg:justify-center h-full"
+              >
+                <div className="hidden md:block">{!showFilters ? <FiChevronRight /> : <FiChevronLeft />}</div>
+                <div className="md:hidden">{!showFilters ? <FiChevronDown /> : <FiChevronUp />}</div>
+                <span>Filters</span>
+              </button>
+              <button className="bg-[#7d7d7d]/30 text-white font-bold p-3 flex items-center rounded-md backdrop-blur-[30.7px] h-full">
+                <FiRefreshCw />
+              </button>
+            </div>
+            <div className="bg-[#7d7d7d]/30  flex-1 flex items-center rounded-[10px] text-white backdrop-blur-[30.7px] lg:h-full w-full lg:w-auto">
               <span className="text-white p-3">
                 <FiSearch />
               </span>
@@ -128,59 +130,61 @@ export const Collections = () => {
   return (
     <>
       {hydrated && (
-        <div className="flex flex-col justify-center items-center gap-3 w-full">
-          <div className="flex justify-center md:justify-start items-center w-full gap-5 px-1">
-            <div className="dropdown">
-              <label
-                tabIndex={0}
-                className="bg-[#7d7d7d]/30 text-white font-bold p-3 flex items-center justify-between rounded-md backdrop-blur-[30.7px] gap-2 cursor-pointer md:text-[16px] text-[12px]"
-              >
-                <div className="avatar">
-                  <div className="w-6 rounded-full">
-                    <img src={chain?.logoURI || '/images/all_chains.svg'} alt={chain?.symbol || 'All'} />
-                  </div>
-                </div>
-                <span className="hidden md:block">{chain?.name || 'All Blockchains'}</span>
-                <FiChevronDown />
-              </label>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu p-2 shadow bg-[#000] border border-[#fff] rounded-[12px] md:w-[300px] w-[200px] backdrop-blur-[30.7px] text-white"
-              >
-                <li>
-                  <a className="gap-2 flex justify-between items-center w-full" onClick={() => setSelectedChainId(0)}>
-                    <div className="flex justify-start items-center gap-1">
-                      <div className="avatar">
-                        <div className="w-8 rounded-full">
-                          <img src="/images/all_chains.svg" alt="All" />
-                        </div>
-                      </div>
-                      All Blockchains
+        <div className="flex flex-col justify-center items-center gap-6 w-full">
+          <div className="flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center w-full gap-5 px-7 lg:px-4">
+            <div className="flex justify-center items-center gap-3 w-full lg:w-auto lg:h-full">
+              <div className="dropdown text-[1em] font-outfit w-full lg:w-auto">
+                <label
+                  tabIndex={0}
+                  className="bg-[#7d7d7d]/30 text-white font-bold p-3 flex items-center justify-between rounded-md backdrop-blur-[30.7px] gap-2 cursor-pointer"
+                >
+                  <div className="avatar">
+                    <div className="w-6 rounded-full">
+                      <img src={chain?.logoURI || '/images/all_chains.svg'} alt={chain?.symbol || 'All'} />
                     </div>
-                    {selectedChainId === 0 && <FiCheck />}
-                  </a>
-                </li>
-                {_.map(Object.keys(chains), (key, index) => (
-                  <li key={index}>
-                    <a className="gap-2 flex justify-between items-center w-full" onClick={() => setSelectedChainId(parseInt(key))}>
+                  </div>
+                  <span className="font-outfit font-[700]">{chain?.name || 'All Blockchains'}</span>
+                  <FiChevronDown />
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu p-2 shadow bg-[#000] border border-[#fff] rounded-[12px] lg:w-[300px] w-[200px] backdrop-blur-[30.7px] text-white"
+                >
+                  <li>
+                    <a className="gap-2 flex justify-between items-center w-full" onClick={() => setSelectedChainId(0)}>
                       <div className="flex justify-start items-center gap-1">
                         <div className="avatar">
                           <div className="w-8 rounded-full">
-                            <img src={chains[key as keyof typeof chains].logoURI} alt={chains[key as keyof typeof chains].symbol} />
+                            <img src="/images/all_chains.svg" alt="All" />
                           </div>
                         </div>
-                        {chains[key as keyof typeof chains].name}
+                        All Blockchains
                       </div>
-                      {selectedChainId === parseInt(key) && <FiCheck />}
+                      {selectedChainId === 0 && <FiCheck />}
                     </a>
                   </li>
-                ))}
-              </ul>
+                  {_.map(Object.keys(chains), (key, index) => (
+                    <li key={index}>
+                      <a className="gap-2 flex justify-between items-center w-full" onClick={() => setSelectedChainId(parseInt(key))}>
+                        <div className="flex justify-start items-center gap-1">
+                          <div className="avatar">
+                            <div className="w-8 rounded-full">
+                              <img src={chains[key as keyof typeof chains].logoURI} alt={chains[key as keyof typeof chains].symbol} />
+                            </div>
+                          </div>
+                          {chains[key as keyof typeof chains].name}
+                        </div>
+                        {selectedChainId === parseInt(key) && <FiCheck />}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button className="bg-[#7d7d7d]/30 text-white font-bold p-3 flex items-center rounded-md backdrop-blur-[30.7px] h-full">
+                <FiRefreshCw />
+              </button>
             </div>
-            <button className="bg-[#7d7d7d]/30 text-white font-bold p-3 flex items-center rounded-md backdrop-blur-[30.7px]">
-              <FiRefreshCw />
-            </button>
-            <div className="bg-[#7d7d7d]/30  flex-1 flex items-center rounded-[10px] mr-2 text-white backdrop-blur-[30.7px]">
+            <div className="bg-[#7d7d7d]/30  flex-1 flex items-center rounded-[10px] text-white backdrop-blur-[30.7px] w-full lg:h-full">
               <span className="text-white p-3">
                 <FiSearch />
               </span>

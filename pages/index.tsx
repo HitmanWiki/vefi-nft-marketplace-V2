@@ -41,9 +41,11 @@ const Home: NextPage = () => {
         </div>
         <CollectionsList />
         <div className="flex justify-center items-center">
-          <button className="border-[#fff] border rounded-[4px] px-2 py-1 flex justify-center items-center">
-            <span className="text-[#fff] font-[500] text-[1em] font-monumentExtended">Browse Collections</span>
-          </button>
+          <Link href="/explore?tab=collections">
+            <button className="border-[#fff] border rounded-[4px] px-2 py-1 flex justify-center items-center">
+              <span className="text-[#fff] font-[500] text-[1em] font-monumentExtended">Browse Collections</span>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col justify-evenly gap-5 items-center w-full py-4 px-7">

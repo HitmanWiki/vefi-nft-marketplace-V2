@@ -25,7 +25,9 @@ class DataStore {
         banner: 'https://placeimg.com/1260/900/people',
         urls: { twitter: 'https://twitter.com/java_warrior', website: 'https://google.com' },
         blockchain: `0x${chainKeys[Math.floor(Math.random() * chainKeys.length)].toString(16)}`,
-        createdOn: new Date()
+        createdOn: new Date(),
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
       },
       {
         name: 'Pleonides',
@@ -41,7 +43,9 @@ class DataStore {
         banner: 'https://placeimg.com/1260/900/tech',
         urls: { twitter: 'https://twitter.com/java_warrior', website: 'https://google.com' },
         blockchain: `0x${chainKeys[Math.floor(Math.random() * chainKeys.length)].toString(16)}`,
-        createdOn: new Date()
+        createdOn: new Date(),
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
       },
       {
         name: 'Arcadius',
@@ -57,7 +61,9 @@ class DataStore {
         banner: 'https://placeimg.com/1260/900/arch',
         urls: { twitter: 'https://twitter.com/java_warrior', website: 'https://google.com' },
         blockchain: `0x${chainKeys[Math.floor(Math.random() * chainKeys.length)].toString(16)}`,
-        createdOn: new Date()
+        createdOn: new Date(),
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..'
       },
       {
         name: 'Depraved Generals',
@@ -78,7 +84,9 @@ class DataStore {
           discord: 'https://discord.com'
         },
         blockchain: `0x${chainKeys[Math.floor(Math.random() * chainKeys.length)].toString(16)}`,
-        createdOn: new Date()
+        createdOn: new Date(),
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
       },
       {
         name: 'Caustic Actors',
@@ -100,7 +108,9 @@ class DataStore {
           telegram: 'https://telegram.com'
         },
         blockchain: `0x${chainKeys[Math.floor(Math.random() * chainKeys.length)].toString(16)}`,
-        createdOn: new Date()
+        createdOn: new Date(),
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
       },
       {
         name: 'Denied Leverage',
@@ -122,7 +132,9 @@ class DataStore {
           telegram: 'https://telegram.com'
         },
         blockchain: `0x${chainKeys[Math.floor(Math.random() * chainKeys.length)].toString(16)}`,
-        createdOn: new Date()
+        createdOn: new Date(),
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
       }
     ];
 
